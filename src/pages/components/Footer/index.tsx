@@ -1,7 +1,7 @@
 import { Container, Group, ActionIcon, rem, Title, Image } from '@mantine/core';
 import classes from './Footer.module.css';
 
-export function Footer({
+export default function Footer({
     page = ''
 }) {
     let display:any = 'block'; 

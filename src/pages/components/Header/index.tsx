@@ -4,7 +4,7 @@ import classes from './Header.module.css';
 import SearchBar from '../SearchBar';
 import Link from 'next/link'
 
-export function Header() {
+export default function Header() {
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
     return (
