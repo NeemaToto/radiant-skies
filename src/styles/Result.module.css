@@ -1,0 +1,14 @@
+.main {
+    overflow: hidden;
+
+}
+
+
+
+@media (max-width: 846px) {
+    .sectionContainer {
+        gap: 5rem !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+}
