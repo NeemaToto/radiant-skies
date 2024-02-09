@@ -1,8 +1,8 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Loader, Flex, Text, Title } from '@mantine/core';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
+import Header  from './components/Header';
+import Footer from './components/Footer';
 import Image from 'next/image'
 
 import styles from "@/styles/Result.module.css";
