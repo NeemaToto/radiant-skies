@@ -1,12 +1,16 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { Raleway } from 'next/font/google'
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 
+const raleway = Raleway({ subsets: ['latin'] })
+
+console.log(raleway)
 
 const theme = createTheme({
   primaryColor: 'rain',
-  fontFamily: 'Raleway, sans serif',
+  fontFamily: raleway.style.fontFamily,
   colors: {
     rain: [
       "#e2f7ff",
