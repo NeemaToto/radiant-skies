@@ -14,7 +14,7 @@ export default function Result() {
     console.log(`the result page query is: ${query}`);
 
     const [forecast, setForecast] = useState<any[]>([]);
-    const [currentForecast, setCurrentForecast] = useState<any>();
+    const [currentForecast, setCurrentForecast] = useState<any>([]);
     const [date, setDate] = useState<string>()
     const [fiveDayForecast, setFiveDayForecast] = useState<any>([]);
 
@@ -60,6 +60,8 @@ export default function Result() {
                 console.error('Error fetching data:', error);
             });
     }, [query]);
+
+    console.log(currentForecast.name)
 
     return (
         <main className={`${styles.main}`}>
