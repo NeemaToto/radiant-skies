@@ -18,8 +18,8 @@ export default function Result() {
     const [date, setDate] = useState<string>()
     const [fiveDayForecast, setFiveDayForecast] = useState<any>([]);
 
-   const [loadingCurrentDone, setLoadingCurrentDone] = useState(false);
-   const [loadingFiveDayDone, setLoadingFiveDayDone] = useState(false);
+    const [loadingCurrentDone, setLoadingCurrentDone] = useState(false);
+    const [loadingFiveDayDone, setLoadingFiveDayDone] = useState(false);
 
     const API_KEY: string = '99c06acb3afacd06144d945e2f571da8';
     const FORECAST_URL: string = `https://api.openweathermap.org/data/2.5/forecast?q=${query}&units=metric&appid=${API_KEY}`;
@@ -30,7 +30,7 @@ export default function Result() {
             .then((response) => {
                 const data = response.data;
                 setForecast(data.list);
-                
+
                 const fiveDays = data.list.filter((item: any, index: number) => index % 8 === 0);
                 setFiveDayForecast(fiveDays);
                 console.log(loadingFiveDayDone)
@@ -110,10 +110,10 @@ export default function Result() {
                                     wrap="wrap"
                                 >
                                     <Text>{date}</Text>
-                                    { currentForecast &&
+                                    {currentForecast &&
                                         <Title order={1}>{currentForecast.name}, {currentForecast.sys.country}</Title>
                                     }
-                                    
+
                                 </Flex>
 
                                 <Flex
