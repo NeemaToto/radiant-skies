@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 
+
 const theme = createTheme({
   primaryColor: 'rain',
   fontFamily: 'Raleway, sans serif',
@@ -48,7 +49,7 @@ const theme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider theme={theme} >
       <Component {...pageProps} />
     </MantineProvider>
   )

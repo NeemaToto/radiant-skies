@@ -4,7 +4,7 @@ import classes from './Footer.module.css';
 export default function Footer({
     page = ''
 }) {
-    let display:any = 'block'; 
+    let display: any = 'block';
 
     if (page === 'result') {
         display = 'block';
@@ -14,7 +14,7 @@ export default function Footer({
 
     return (
         <div className={classes.position}>
-            <div className={classes.footer} style={{ }}>
+            <div className={classes.footer} style={{}}>
                 <Container size='full' className={classes.inner}>
                     <Group preventGrowOverflow>
                         <Title order={1} fw={400} size={20} className={classes.title}>Radiant <br /> Skies</Title>

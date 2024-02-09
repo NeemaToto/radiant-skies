@@ -14,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main}`}>
+      <main className={`${styles.main} `}>
         <Header />
         <Flex
           mih='20vw'
@@ -24,7 +24,7 @@ export default function Home() {
           direction="column"
           wrap="wrap"
           mt={-80}
-          style={{height: '65%'}}
+          style={{ height: '65%' }}
         >
           <Flex
             gap="xs"
@@ -57,7 +57,7 @@ export default function Home() {
             </Text>
           </Flex>
         </Flex>
-        <Footer page="home"/>
+        <Footer page="home" />
       </main>
     </>
   )

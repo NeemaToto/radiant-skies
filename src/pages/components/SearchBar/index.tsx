@@ -7,7 +7,6 @@ export default function SearchBar({
     width = '',
     visible = ''
 }) {
-
     const router = useRouter()
 
     const Icon = <Image h={15} c='blue' src='/icons/magnifyIcon.svg' onClick={() => handleSubmit()} />

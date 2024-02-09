@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { Loader, Flex, Text, Title } from '@mantine/core';
-import Header  from './components/Header';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import Image from 'next/image'
 
@@ -68,8 +68,8 @@ export default function Result() {
                 forecast.length >= 1 ? (
                     <Flex
                         direction='column'
-                        style={{position: 'relative', height: '100%'}}
-                    > 
+                        style={{ position: 'relative', height: '100%' }}
+                    >
                         <Flex
                             mih={50}
                             gap='15rem'
@@ -193,15 +193,18 @@ export default function Result() {
                                                         <Text>{day.weather[0].main} - {day.weather[0].description}</Text>
                                                     </Flex>
                                                     <Text>{Math.round(day.main.temp)}° Celsius</Text>
+                                                    <Text>Wind speed: {day.wind.speed} km/h</Text>
+                                                    <Image src='/icons/Atmosphere.svg' width={20} height={20} alt='wind icon' />
                                                 </Flex>
+
                                             </Flex>
                                         )
                                     })
                                 }
                             </Flex>
                         </Flex>
-                        
-                        <Footer page='result' /> 
+
+                        <Footer page='result' />
                     </Flex>
                 ) : (
                     <div>
@@ -222,11 +225,8 @@ export default function Result() {
                         </Flex>
                         <Footer page='home' />
                     </div>
-                    
                 )
-
             }
-
         </main>
     )
 }
