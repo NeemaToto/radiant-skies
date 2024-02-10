@@ -5,7 +5,6 @@ import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 
 const raleway = Raleway({ subsets: ['latin'] })
-
 console.log(raleway)
 
 const theme = createTheme({

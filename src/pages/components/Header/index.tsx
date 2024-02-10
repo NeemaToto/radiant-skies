@@ -1,4 +1,4 @@
-import { Group, Burger, Image, Title, Drawer, Box, Divider, NavLink, Flex } from '@mantine/core';
+import { Burger, Image, Title, Drawer, Box, Divider, Flex } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './Header.module.css';
 import SearchBar from '../SearchBar';
