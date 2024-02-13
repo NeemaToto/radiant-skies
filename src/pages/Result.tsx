@@ -13,10 +13,10 @@ export default function Result() {
     const { query } = router.query;
     console.log(`the result page query is: ${query}`);
 
-    const [forecast, setForecast] = useState<any[]>([]);
-    const [currentForecast, setCurrentForecast] = useState<any>([]);
+    const [currentForecast, setCurrentForecast] = useState<CurrentForecastData | any>(null);
+    const [fiveDayForecast, setFiveDayForecast] = useState<FiveDayForecast>();
     const [date, setDate] = useState<string>('')
-    const [fiveDayForecast, setFiveDayForecast] = useState<any>([]);
+
 
     const [loadingCurrentDone, setLoadingCurrentDone] = useState<boolean>(false);
     const [loadingFiveDayDone, setLoadingFiveDayDone] = useState<boolean>(false);
@@ -29,17 +29,18 @@ export default function Result() {
         axios.get(FORECAST_URL)
             .then((response) => {
                 const data = response.data;
-                setForecast(data.list);
 
                 const fiveDays = data.list.filter((item: any, index: number) => index % 8 === 0);
                 setFiveDayForecast(fiveDays);
+                console.log('five day forecast')
+                console.log(fiveDayForecast)
                 console.log(loadingFiveDayDone)
                 setLoadingFiveDayDone(true)
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
             });
-        console.log('length: ' + forecast.length);
+
 
         axios.get(CURRENT_FORECAST_URL)
             .then((response) => {
